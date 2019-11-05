@@ -7,5 +7,5 @@ def index():
     return render_template('index.html')
 
 @app.route("/elements")
-def index():
+def elements():
     return render_template('elements.html')
