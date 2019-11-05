@@ -17,7 +17,7 @@
 
     <!-- Header -->
     <header id="header">
-        <a class="logo" href="{{ url_for("index")}}">DXC Technology</a>
+        <a class="logo" href={{ url_for("index")}}>DXC Technology</a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -26,9 +26,8 @@
     <!-- Nav -->
     <nav id="menu">
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="elements.html">Elements</a></li>
-            <li><a href="generic.html">Generic</a></li>
+            <li><a href={{ url_for("index")}}>Demo</a></li>
+            <li><a href={{ url_for("elements")}}>ProtoTeam</a></li>
         </ul>
     </nav>
 
@@ -202,7 +201,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->  
+    <!-- Scripts -->
     <script src={{ url_for("static", filename="/js/jquery.min.js")}}></script>
     <script src={{ url_for("static", filename="/js/browser.min.js")}}></script>
     <script src={{ url_for("static", filename="/js/breakpoints.min.js")}}></script>
