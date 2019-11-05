@@ -114,28 +114,43 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
 
-   
-        
 
-        <div class="owl-carousel owl-theme">
 
-            <div class="item">
-                <img  src="/static/sacs/img_0.jpg" alt="Mirage">
-            </div>
-            <div class="item">
-                <img  src="/static/sacs/img_1.jpg" alt="Mirage">
-            </div>
-            <div class="item">
-                <img  src="/static/sacs/img_2.jpg" alt="Mirage">
-            </div>
 
+    <div class="owl-carousel owl-theme">
+
+        <div class="item">
+            <img src="/static/sacs/img_0.jpg" alt="Mirage">
+        </div>
+        <div class="item">
+            <img src="/static/sacs/img_1.jpg" alt="Mirage">
+        </div>
+        <div class="item">
+            <img src="/static/sacs/img_2.jpg" alt="Mirage">
         </div>
 
+    </div>
 
-       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
+    <div class="my-slider">
+        <div><img src="/static/sacs/img_0.jpg" alt="Mirage"></div>
+        <div><img src="/static/sacs/img_0.jpg" alt="Mirage"></div>
+        <div><img src="/static/sacs/img_0.jpg" alt="Mirage"></div>
+    </div>
 
-        <!-- CTA
+    <script type="module">
+        
+
+        var slider = tns({
+            container: '.my-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: true
+        });
+    </script>
+    <!-- CTA
     <section id="cta" class="wrapper">
         <div class="inner">
             <h2>Curabitur ullamcorper ultricies</h2>
@@ -195,45 +210,45 @@
     </section>
 
     <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <div class="content">
-                    <section>
-                        <h3>Accumsan montes viverra</h3>
-                        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-                    </section>
-                    <section>
-                        <h4>Sem turpis amet semper</h4>
-                        <ul class="alt">
-                            <li><a href="#">Dolor pulvinar sed etiam.</a></li>
-                            <li><a href="#">Etiam vel lorem sed amet.</a></li>
-                            <li><a href="#">Felis enim feugiat viverra.</a></li>
-                            <li><a href="#">Dolor pulvinar magna etiam.</a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Magna sed ipsum</h4>
-                        <ul class="plain">
-                            <li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-                            <li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-                            <li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-                            <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="copyright">
-                    &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
-                </div>
+    <footer id="footer">
+        <div class="inner">
+            <div class="content">
+                <section>
+                    <h3>Accumsan montes viverra</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+                </section>
+                <section>
+                    <h4>Sem turpis amet semper</h4>
+                    <ul class="alt">
+                        <li><a href="#">Dolor pulvinar sed etiam.</a></li>
+                        <li><a href="#">Etiam vel lorem sed amet.</a></li>
+                        <li><a href="#">Felis enim feugiat viverra.</a></li>
+                        <li><a href="#">Dolor pulvinar magna etiam.</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Magna sed ipsum</h4>
+                    <ul class="plain">
+                        <li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+                        <li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+                        <li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+                        <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+                    </ul>
+                </section>
             </div>
-        </footer>
+            <div class="copyright">
+                &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+            </div>
+        </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script src={{ url_for("static", filename="/js/jquery.min.js")}}></script>
-        <script src={{ url_for("static", filename="/js/owl.carousel.js")}}></script>
-        <script src={{ url_for("static", filename="/js/browser.min.js")}}></script>
-        <script src={{ url_for("static", filename="/js/breakpoints.min.js")}}></script>
-        <script src={{ url_for("static", filename="/js/util.js")}}></script>
-        <script src={{ url_for("static", filename="/js/main.js")}}></script>
+    <!-- Scripts -->
+    <script src={{ url_for("static", filename="/js/jquery.min.js")}}></script>
+    <script src={{ url_for("static", filename="/js/owl.carousel.js")}}></script>
+    <script src={{ url_for("static", filename="/js/browser.min.js")}}></script>
+    <script src={{ url_for("static", filename="/js/breakpoints.min.js")}}></script>
+    <script src={{ url_for("static", filename="/js/util.js")}}></script>
+    <script src={{ url_for("static", filename="/js/main.js")}}></script>
 
 
 </body>
