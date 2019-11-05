@@ -1,9 +1,35 @@
 /*
-	Industrious by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
-(function($) {
+(function ($) {
+
+    $('.owl-carousel').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        margin: 30,
+        responsiveClass: true,
+        nav: true,
+        loop: true,
+        stagePadding: 150,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+
+
 
 	var	$window = $(window),
 		$banner = $('#banner'),
