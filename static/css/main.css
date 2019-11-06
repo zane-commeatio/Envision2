@@ -2836,7 +2836,7 @@ body.is-menu-visible #menu {
     width: 100%;
     margin: 0;
     color: #fff;
-    background: #1FB264;
+    background: #111111;
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -2848,7 +2848,7 @@ body.is-menu-visible #menu {
 }
 
     .file-upload-btn:hover {
-        background: #1AA059;
+        background: #111111;
         color: #ffffff;
         transition: all .2s ease;
         cursor: pointer;
@@ -2883,13 +2883,13 @@ body.is-menu-visible #menu {
 
     .image-dropping,
     .image-upload-wrap:hover {
-        background-color: #1FB264;
+        background-color: #111111;
         border: 4px dashed #ffffff;
     }
 
 .image-title-wrap {
     padding: 0 15px 15px 15px;
-    color: #222;
+    color: #111111;
 }
 
 .drag-text {
@@ -2899,7 +2899,7 @@ body.is-menu-visible #menu {
     .drag-text h3 {
         font-weight: 100;
         text-transform: uppercase;
-        color: #15824B;
+        color: #fff;
         padding: 60px 0;
     }
 
@@ -2914,7 +2914,7 @@ body.is-menu-visible #menu {
     width: 200px;
     margin: 0;
     color: #fff;
-    background: #cd4535;
+    background: #111111;
     border: none;
     padding: 10px;
     border-radius: 4px;
