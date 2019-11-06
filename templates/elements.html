@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href={{ url_for("static", filename="css/main.css") }} />
 </head>
 <body class="is-preload">
 
     <!-- Header -->
     <header id="header">
-        <a class="logo" href="index.html">Industrious</a>
+        <a class="logo" href={{ url_for("index")}}>Industrious</a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -22,9 +22,9 @@
     <!-- Nav -->
     <nav id="menu">
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="elements.html">Elements</a></li>
-            <li><a href="generic.html">Generic</a></li>
+            <li><a href={{ url_for("index")}}>Home</a></li>
+            <li><a href{{ url_for("elements")}}>Elements</a></li>
+
         </ul>
     </nav>
 
@@ -515,11 +515,10 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src={{ url_for("static", filename="js/browser.min.js")}}></script>
+    <script src={{ url_for("static", filename="js/breakpoints.min.js")}}></script>
+    <script src={{ url_for("static", filename="js/util.js")}}></script>
+    <script src={{ url_for("static", filename="js/main.js")}}></script>
 
 </body>
 <!--
