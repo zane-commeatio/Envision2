@@ -65,10 +65,10 @@
                 </section>
                 <section>
                     <div class="content">
-                        <img src="/static/sacs/img_2.jpg" />                   
+                        <img src="/static/sacs/img_2.jpg" />
                     </div>
                 </section>
-               
+
             </div>
         </div>
     </section>
@@ -76,66 +76,25 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
 
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="file-upload">
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
 
-
-    <!-- CTA
-    <section id="cta" class="wrapper">
-        <div class="inner">
-            <h2>Curabitur ullamcorper ultricies</h2>
-            <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-        </div>
-    </section>
-
-    <!-- Testimonials
-    <section class="wrapper">
-        <div class="inner">
-            <header class="special">
-                <h2>Faucibus consequat lorem</h2>
-                <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
-            </header>
-            <div class="testimonials">
-                <section>
-                    <div class="content">
-                        <blockquote>
-                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-                        </blockquote>
-                        <div class="author">
-                            <div class="image">
-                                <img src="/static/images/pic01.jpg" alt="" />
-                            </div>
-                            <p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="content">
-                        <blockquote>
-                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-                        </blockquote>
-                        <div class="author">
-                            <div class="image">
-                                <img src="/static/images/pic03.jpg" alt="" />
-                            </div>
-                            <p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="content">
-                        <blockquote>
-                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-                        </blockquote>
-                        <div class="author">
-                            <div class="image">
-                                <img src="/static/images/pic02.jpg" alt="" />
-                            </div>
-                            <p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
-                        </div>
-                    </div>
-                </section>
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3>Drag and drop a file or select add Image</h3>
             </div>
         </div>
-    </section>
+        <div class="file-upload-content">
+            <img class="file-upload-image" src="#" alt="your image" />
+            <div class="image-title-wrap">
+                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Footer -->
     <footer id="footer">
@@ -171,8 +130,8 @@
     </footer>
 
     <!-- Scripts -->
-    
-  
+
+
     <script src={{ url_for("static", filename="js/browser.min.js")}}></script>
     <script src={{ url_for("static", filename="js/breakpoints.min.js")}}></script>
     <script src={{ url_for("static", filename="js/util.js")}}></script>
