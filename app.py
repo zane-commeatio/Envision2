@@ -6,10 +6,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/elements")
+@app.route("/team")
 def elements():
-    return render_template('elements.html')
+    return render_template('team.html')
 
 
-
+@app.route("/bbfu")
+def bbfu():
+    return render_template('bbfu.html')
 
