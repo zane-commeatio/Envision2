@@ -1,7 +1,7 @@
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import re
-from search import find_similar
+#from search import find_similar
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = '/upload'
@@ -23,7 +23,7 @@ def index():
             return render_template('index.html', debug = e)
         
 
-    return render_template('index.html', debug = None)
+    return render_template('index.html')
 
 @app.route("/team")
 def team():
