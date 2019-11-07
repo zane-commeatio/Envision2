@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, flash, request, redirect, url_for
+from werkzeug.utils import secure_filename
+
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = '/upload'
 
 @app.route("/", methods = ['GET', 'POST'])
 @app.route("/index", methods = ['GET', 'POST'])
