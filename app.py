@@ -1,9 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
-@app.route("/")
-@app.route("/index")
+@app.route("/", methods = ['GET', 'POST'])
+@app.route("/index", methods = ['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+      f = request.files['file']
+      f.save(secure_filename(f.filename))
+
     return render_template('index.html')
 
 @app.route("/team")
