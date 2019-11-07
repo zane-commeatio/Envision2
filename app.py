@@ -8,6 +8,8 @@ def index():
       f = request.files['file']
       f.save(secure_filename(f.filename))
 
+      return render_template('index.html',debug = str(f.filename))
+
     return render_template('index.html')
 
 @app.route("/team")
