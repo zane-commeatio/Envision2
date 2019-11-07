@@ -11,13 +11,11 @@ def index():
 
     if request.method == 'POST':
         try:
-            #f = request.files['uploaded_picture']
-            #f.save(secure_filename(f.filename))
             files = request.files.to_dict()
             f = files['uploaded_picture']
             extension = re.findall(r'.*(\..*)',f.filename)[0]
-            f.save('uploaded_picture')
-            return render_template('index.html', debug = str(extension))
+            f.save('uploaded_picture' + str(extension))
+            return render_template('index.html', debug = 'uploaded_picture' + str(extension))
         except Exception as e:
             print(e)
             return render_template('index.html', debug = e)
