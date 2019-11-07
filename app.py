@@ -10,7 +10,7 @@ def index():
 
     if request.method == 'POST':
         try:
-            f = request.form['uploaded_picture']
+            #f = request.files['uploaded_picture']
             #f.save(secure_filename(f.filename))
             print('DEBUG')
             files = request.files
