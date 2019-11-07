@@ -11,7 +11,7 @@ def index():
     if request.method == 'POST':
         try:
             f = request.files['uploaded_picture']
-            f.save(secure_filename(f.filename))
+            #f.save(secure_filename(f.filename))
             print('DEBUG')
             files = request.files
             return render_template('index.html', debug = str(files[0]))
