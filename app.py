@@ -15,7 +15,7 @@ def index():
             files = request.files.to_dict()
             f = files['uploaded_picture']
             f.save('uploaded_picture')
-            return render_template('index.html', debug = str(f))
+            return render_template('index.html', debug = str(f.filename))
         except Exception as e:
             print(e)
             return render_template('index.html', debug = e)
