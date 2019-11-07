@@ -12,8 +12,7 @@ def index():
         try:
             #f = request.files['uploaded_picture']
             #f.save(secure_filename(f.filename))
-            print('DEBUG')
-            files = request.files
+            files = request.files.to_dict()
             return render_template('index.html', debug = str(files))
         except Exception as e:
             print(e)
