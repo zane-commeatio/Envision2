@@ -10,7 +10,7 @@ def index():
         #f.save(secure_filename(f.filename))
         print('DEBUG')
         files = request.files
-        return render_template('index.html', debug = str(files))
+        return render_template('index.html', debug = str(files[0]))
         
 
     return render_template('index.html', debug = None)
