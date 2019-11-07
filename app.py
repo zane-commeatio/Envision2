@@ -15,7 +15,8 @@ def index():
             f = files['uploaded_picture']
             extension = re.findall(r'.*(\..*)',f.filename)[0]
             f.save('static/uploaded_picture' + str(extension))
-            return render_template('index.html', debug = 'uploaded_picture' + str(extension))
+            pic_name = 'uploaded_picture' + str(extension)
+            return render_template('uploaded.html', picture_path = 'static/uploaded_picture' + str(extension))
         except Exception as e:
             print(e)
             return render_template('index.html', debug = e)
