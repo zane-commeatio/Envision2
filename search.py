@@ -50,7 +50,7 @@ def find_similar(query):
 	for (score, resultID) in results:
 
 		# add img to list
-		list_img.append(str(resultID))
+		list_img.append(str(resultID).replace("\\","/"))
 
 	return list_img
 
