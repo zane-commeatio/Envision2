@@ -15,9 +15,9 @@ def index():
             files = request.files.to_dict()
             f = files['uploaded_picture']
             extension = re.findall(r'.*(\..*)',f.filename)[0]
-            f.save('static/uploaded_picture' + str(extension))
-            pic_name = 'uploaded_picture' + str(extension)
-            return render_template('uploaded.html', picture_path = 'static/uploaded_picture' + str(extension) , resp = find_similar('static/uploaded_picture' + str(extension)) )
+            f.save('static/uploaded_picture.jpg')
+            response = find_similar('static/uploaded_picture.jpg')
+            return render_template('uploaded.html', resp = response, picture_path = 'static/uploaded_picture.jpg'  )
         except Exception as e:
             print(e)
             return render_template('index.html', debug = e)
