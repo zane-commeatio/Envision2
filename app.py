@@ -2,6 +2,7 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import re
 from search import find_similar
+import time
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = '/upload'
@@ -17,7 +18,7 @@ def index():
             extension = re.findall(r'.*(\..*)',f.filename)[0]
             f.save('static/uploaded_picture.jpg')
             response = find_similar('static/uploaded_picture.jpg')
-            return render_template('uploaded.html', resp = response, picture_path = 'static/uploaded_picture.jpg'  )
+            return render_template('uploaded.html', resp = response, picture_path = 'static/uploaded_picture.jpg?' + str(time.time())  )
         except Exception as e:
             print(e)
             return render_template('index.html', debug = e)
@@ -35,4 +36,5 @@ def bbfu():
     return render_template('bbfu.html')
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", debug = True)
+    #app.run(host = "0.0.0.0", debug = True)
+    app.run(debug = True)
