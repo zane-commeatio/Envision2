@@ -18,7 +18,7 @@ def index():
             extension = re.findall(r'.*(\..*)',f.filename)[0]
             f.save('static/uploaded_picture.jpg')
             response = find_similar('static/uploaded_picture.jpg')
-            return render_template('uploaded.html', resp = response, picture_path = 'static/uploaded_picture.jpg?' + str(time.time())  )
+            return render_template('uploaded.html', resp = response, picture_path = 'static/uploaded_picture.jpg?' + str(time.time()) )
         except Exception as e:
             print(e)
             return render_template('index.html', debug = e)
