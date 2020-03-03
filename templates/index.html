@@ -37,10 +37,10 @@
     <!-- Banner -->
     <section id="banner">
         <div class="inner">
-            <h1>Product Similarity</h1>
+            <h1>Product Recomendation</h1>
             <p>
                 A Content-Based Search Engines tools that utilize Deep Learning to apply pattern recognition methods in order
-                to retrieve similar images and facilitates the product proposal
+                to retrieve similar patterns and facilitates the product proposal
             </p>
         </div>
         <video autoplay loop muted playsinline src="images/banner.mp4"></video>
@@ -61,8 +61,8 @@
     <section class="wrapper">
         <div class="inner">
             <header class="special">
-                <h2>Product Similarity</h2>
-                <p>Select a bag you like and let our deep learning algorithms find the most similar bag in our stock :</p>
+                <h2>Product recomendation</h2>
+                <p>Take a photo of your outfit and let our deep learning algorithms find the best bags in our stock :</p>
             </header>
 
             <form action={{ url_for("index") }} method="POST" enctype="multipart/form-data">
@@ -73,7 +73,7 @@
                     <div class="image-upload-wrap">
                         <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" name="uploaded_picture" />
                         <div class="drag-text">
-                            <h3>Drag and drop a file or clic</h3>
+                            <h3>Drop a picture or clic to browse</h3>
                         </div>
                     </div>
                     <div class="file-upload-content">
